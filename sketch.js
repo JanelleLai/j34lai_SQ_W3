@@ -184,6 +184,7 @@ let groundY;
 
 function preload() {
   bgimg = loadImage("assets/images/bgimg.png");
+  prebgimg = loadImage("assets/images/pre_bgimg.png");
   bgMusic = loadSound("assets/sounds/bgmusic.m4a");
   punchSounds = loadSound("assets/sounds/jump.mp3");
   winSound = loadSound("assets/sounds/levelup.mp3");
@@ -214,7 +215,7 @@ function setupFighters() {
 }
 
 function draw() {
-  background(bgimg);
+  background(prebgimg);
 
   if (gameState === STATE_START) {
     drawStartScreen();
@@ -249,6 +250,7 @@ function endGame(winnerLabel) {
 }
 
 function drawStartScreen() {
+  background(bgimg);
   // Title
   fill(0);
   textAlign(CENTER);
@@ -282,7 +284,7 @@ function drawWinScreen() {
   fill(winner === "P1" ? color(0, 200, 180) : color(255, 150, 30));
   textAlign(CENTER);
   textSize(56);
-  text(winner + " Journey Leveled Up!", width / 2, height / 2 - 30);
+  text(winner + " Journey Level Up!", width / 2, height / 2 - 30);
 
   // Rematch prompt
   fill(255);
