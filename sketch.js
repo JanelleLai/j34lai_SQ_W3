@@ -111,9 +111,7 @@ class Fighter {
     // Punch extends toward the opponent
     this.punchDir = targetX > this.x ? 1 : -1;
 
-    // Pick a random punch sound from the array for variety
-    let randomPunch = punchSounds[floor(random(punchSounds.length))];
-    randomPunch.play();
+    punchSounds.play();
   }
 
   getPunchX() {
