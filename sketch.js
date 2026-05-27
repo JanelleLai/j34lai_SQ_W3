@@ -253,7 +253,7 @@ function drawStartScreen() {
   fill(0);
   textAlign(CENTER);
   textSize(52);
-  text("BLOB BRAWL", width / 2, height / 2 - 60);
+  text("Start Your Journey", width / 2, height / 2 - 60);
 
   // Subtitle
   fill(160);
@@ -282,12 +282,12 @@ function drawWinScreen() {
   fill(winner === "P1" ? color(0, 200, 180) : color(255, 150, 30));
   textAlign(CENTER);
   textSize(56);
-  text(winner + " WINS!", width / 2, height / 2 - 30);
+  text(winner + " Journey Leveled Up!", width / 2, height / 2 - 30);
 
   // Rematch prompt
   fill(255);
   textSize(18);
-  text("Press ENTER to rematch", width / 2, height / 2 + 40);
+  text("Press ENTER to the next journey", width / 2, height / 2 + 40);
 }
 
 function drawArena() {
