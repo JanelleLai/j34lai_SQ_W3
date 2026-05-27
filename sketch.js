@@ -227,6 +227,7 @@ function draw() {
     drawHealthBars();
     drawFightHUD();
   } else if (gameState === STATE_WIN) {
+    drawArena();
     fighter1.draw();
     fighter2.draw();
     drawWinScreen();
@@ -289,6 +290,16 @@ function drawWinScreen() {
   fill(255);
   textSize(18);
   text("Press ENTER to rematch", width / 2, height / 2 + 40);
+}
+
+function drawArena() {
+  noFill();
+  noStroke();
+  rect(0, groundY, width, height - groundY);
+
+  stroke(80);
+  strokeWeight(1);
+  line(0, groundY, width, groundY);
 }
 
 function updateAndDrawFighters() {
