@@ -215,7 +215,7 @@ function setupFighters() {
 }
 
 function draw() {
-  background(prebgimg);
+  background(bgimg);
 
   if (gameState === STATE_START) {
     drawStartScreen();
@@ -250,7 +250,7 @@ function endGame(winnerLabel) {
 }
 
 function drawStartScreen() {
-  background(bgimg);
+  background(prebgimg);
   // Title
   fill(0);
   textAlign(CENTER);
