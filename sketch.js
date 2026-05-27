@@ -227,7 +227,6 @@ function draw() {
     drawHealthBars();
     drawFightHUD();
   } else if (gameState === STATE_WIN) {
-    drawArena();
     fighter1.draw();
     fighter2.draw();
     drawWinScreen();
@@ -252,7 +251,7 @@ function endGame(winnerLabel) {
 
 function drawStartScreen() {
   // Title
-  fill(255);
+  fill(0);
   textAlign(CENTER);
   textSize(52);
   text("BLOB BRAWL", width / 2, height / 2 - 60);
@@ -270,7 +269,7 @@ function drawStartScreen() {
   text("P2: Arrows move   K attack   L block", width / 2, height / 2 + 55);
 
   // Start prompt
-  fill(255);
+  fill(0);
   textSize(16);
   text("Press ENTER to start", width / 2, height / 2 + 110);
 }
@@ -290,16 +289,6 @@ function drawWinScreen() {
   fill(255);
   textSize(18);
   text("Press ENTER to rematch", width / 2, height / 2 + 40);
-}
-
-function drawArena() {
-  fill(40);
-  noStroke();
-  rect(0, groundY, width, height - groundY);
-
-  stroke(80);
-  strokeWeight(1);
-  line(0, groundY, width, groundY);
 }
 
 function updateAndDrawFighters() {
