@@ -264,9 +264,9 @@ function drawStartScreen() {
 
   // Controls — each player shown in their colour
   textSize(14);
-  fill(0, 200, 180);
+  fill(255);
   text("P1: A/D move   F attack   G block", width / 2, height / 2 + 30);
-  fill(255, 150, 30);
+  fill(255);
   text("P2: Arrows move   K attack   L block", width / 2, height / 2 + 55);
 
   // Start prompt
