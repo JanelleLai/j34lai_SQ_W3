@@ -10,7 +10,7 @@ let winSound;
 let bgMusic;
 
 class Fighter {
-  constructor(x, y, colour, controls, label) {
+  constructor(x, y, colour, controls, label, image) {
     // Position and physics
     this.x = x;
     this.y = y;
@@ -23,7 +23,6 @@ class Fighter {
     // Appearance
     this.colour = colour;
     this.label = label; // "P1" or "P2"
-    this.blobT = random(100);
 
     // Controls
     this.controls = controls;
