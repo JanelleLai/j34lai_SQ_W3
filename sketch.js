@@ -165,8 +165,8 @@ let groundY;
 function preload() {
   bgimg = loadImage("assets/images/bgimg.png");
   prebgimg = loadImage("assets/images/pre_bgimg.png");
-  p1 = loadImage("assets/images/p1.png");
-  p2 = loadImage("assets/images/p2.png");
+  p1Img = loadImage("assets/images/p1.png");
+  p2Img = loadImage("assets/images/p2.png");
   bgMusic = loadSound("assets/sounds/bgmusic.m4a");
   punchSounds = loadSound("assets/sounds/jump.mp3");
   winSound = loadSound("assets/sounds/levelup.mp3");
@@ -185,7 +185,7 @@ function setupFighters() {
     color(0, 200, 180), // teal
     { left: 65, right: 68, attack: 70, block: 71 }, // A D F G
     "P1",
-    p1
+    p1Img
   );
 
   fighter2 = new Fighter(
@@ -194,7 +194,7 @@ function setupFighters() {
     color(255, 150, 30), // orange
     { left: LEFT_ARROW, right: RIGHT_ARROW, attack: 75, block: 76 }, // Arrows K L
     "P2",
-    p2
+    p2Img
   );
 }
 
