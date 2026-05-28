@@ -48,6 +48,8 @@ class Fighter {
 
     // Prevents registering more than one hit per attack swing
     this.hitLanded = false;
+
+    this.image = image; //add image property
   }
 
   update() {
@@ -150,32 +152,10 @@ class Fighter {
       ellipse(this.getPunchX(), this.y, 20, 20);
     }
 
-    // Blob body — flash white when hit, normal colour otherwise
-    fill(this.hitFlash > 0 ? color(255) : this.colour);
-    noStroke();
-
-    beginShape();
-    let numPoints = 48;
-    for (let i = 0; i < numPoints; i++) {
-      let angle = (TWO_PI / numPoints) * i;
-      let noiseVal = noise(
-        cos(angle) * 0.8 + this.blobT,
-        sin(angle) * 0.8 + this.blobT
-      );
-      let r = this.r + map(noiseVal, 0, 1, -7, 7);
-      vertex(this.x + cos(angle) * r, this.y + sin(angle) * r);
-    }
-    endShape(CLOSE);
-
-    // Eyes
-    fill(10);
-    ellipse(this.x - 9, this.y - 7, 8, 8);
-    ellipse(this.x + 9, this.y - 7, 8, 8);
+    imageMode(CENTER);
+    image(this.image, this.x, this.y, this.r * 3, this.r * 3); //draw fighter image
 
     pop();
-
-    // Advance blob animation each frame
-    this.blobT += 0.015;
   }
 }
 
@@ -185,6 +165,8 @@ let groundY;
 function preload() {
   bgimg = loadImage("assets/images/bgimg.png");
   prebgimg = loadImage("assets/images/pre_bgimg.png");
+  p1 = loadImage("assets/images/p1.png");
+  p2 = loadImage("assets/images/p2.png");
   bgMusic = loadSound("assets/sounds/bgmusic.m4a");
   punchSounds = loadSound("assets/sounds/jump.mp3");
   winSound = loadSound("assets/sounds/levelup.mp3");
@@ -202,7 +184,8 @@ function setupFighters() {
     groundY - 28,
     color(0, 200, 180), // teal
     { left: 65, right: 68, attack: 70, block: 71 }, // A D F G
-    "P1"
+    "P1",
+    p1
   );
 
   fighter2 = new Fighter(
@@ -210,7 +193,8 @@ function setupFighters() {
     groundY - 28,
     color(255, 150, 30), // orange
     { left: LEFT_ARROW, right: RIGHT_ARROW, attack: 75, block: 76 }, // Arrows K L
-    "P2"
+    "P2",
+    p2
   );
 }
 
@@ -255,7 +239,7 @@ function drawStartScreen() {
   fill(0);
   textAlign(CENTER);
   textSize(52);
-  text("Start Your Journey", width / 2, height / 2 - 60);
+  text("Start Your Journey!", width / 2, height / 2 - 60);
 
   // Subtitle
   fill(160);
