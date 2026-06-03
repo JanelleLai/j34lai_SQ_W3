@@ -6,15 +6,15 @@ To run the sketch locally, open `index.html` in Google Chrome. No additional set
 
 ## Assets
 
-| File                          | Source            |
-| ----------------------------- | ----------------- |
-| `assets/images/bgimg.png`     | Created by myself |
-| `assets/images/p1.png`        | Created by myself |
-| `assets/images/p2.png`        | Created by myself |
-| `assets/images/pre_bgimg.png` | Created by myself |
-| `assets/sounds/bgmusic.m4a`   | Adobe Stock Music |
-| `assets/sounds/jump.mp3`      | pixabay.com       |
-| `assets/sounds/levelup.mp3`   | pixabay.com       |
+| File                            | Source            |
+| ------------------------------- | ----------------- |
+| `assets/images/bgimg.png`       | Created by myself |
+| `assets/images/p1.png`          | Created by myself |
+| `assets/images/p2.png`          | Created by myself |
+| `assets/images/pre_bgimg.png`   | Created by myself |
+| `assets/sounds/bgmusic.m4a` [2] | Adobe Stock Music |
+| `assets/sounds/jump.mp3` [4]    | pixabay.com       |
+| `assets/sounds/levelup.mp3` [3] | pixabay.com       |
 
 ## References
 
